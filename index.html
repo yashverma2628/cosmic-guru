@@ -4,8 +4,830 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Guru Chakresh Jain - Scientific Astrologer</title>
-    <link rel="stylesheet" href="cosmicstyle.css" >
-  
+    <style>
+        /* Only essential styles for functionality - you can replace with your own CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Premium Light Astrologer Website CSS */
+
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+        /* CSS Variables for Light Premium Theme */
+        :root {
+          --primary-light: #f8f9ff;
+          --secondary-light: #ffffff;
+          --accent-gold: #d4af37;
+          --accent-purple: #6b46c1;
+          --soft-beige: #faf8f3;
+          --premium-blue: #4f46e5;
+          --mystic-lavender: #a78bfa;
+          --text-dark: #1f2937;
+          --text-medium: #4b5563;
+          --light-gray: #f3f4f6;
+          --border-light: #e5e7eb;
+          --shadow-light: #f1f5f9;
+          --gradient-light: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #faf8f3 100%);
+          --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f1c40f 50%, #d4af37 100%);
+          --gradient-purple: linear-gradient(135deg, #6b46c1 0%, #8b5cf6 50%, #a78bfa 100%);
+          --gradient-light-radial: radial-gradient(circle at center, #ffffff 0%, #f8f9ff 70%, #faf8f3 100%);
+          --shadow-premium: 0 10px 30px rgba(107, 70, 193, 0.1);
+          --shadow-gold: 0 5px 20px rgba(212, 175, 55, 0.2);
+          --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.3);
+          --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset and Base Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Inter', sans-serif;
+          line-height: 1.6;
+          color: var(--text-dark);
+          background: var(--primary-light);
+          overflow-x: hidden;
+          position: relative;
+        }
+
+        /* Light Background Animation */
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--gradient-light-radial);
+          z-index: -2;
+          animation: lightPulse 8s ease-in-out infinite alternate;
+        }
+
+        body::after {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            radial-gradient(1px 1px at 20% 30%, var(--accent-gold), transparent),
+            radial-gradient(1px 1px at 40% 70%, var(--premium-blue), transparent),
+            radial-gradient(0.5px 0.5px at 90% 40%, var(--accent-purple), transparent),
+            radial-gradient(0.5px 0.5px at 50% 50%, var(--mystic-lavender), transparent),
+            radial-gradient(1px 1px at 80% 10%, var(--accent-gold), transparent);
+          background-repeat: repeat;
+          background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100px 100px;
+          animation: starsMove 20s linear infinite;
+          z-index: -1;
+          opacity: 0.3;
+        }
+
+        @keyframes lightPulse {
+          0% { transform: scale(1); opacity: 0.9; }
+          100% { transform: scale(1.01); opacity: 1; }
+        }
+
+        @keyframes starsMove {
+          0% { transform: translateY(0px); }
+          100% { transform: translateY(-100px); }
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Playfair Display', serif;
+          font-weight: 600;
+          color: var(--text-dark);
+          line-height: 1.2;
+        }
+
+        h1 {
+          font-size: clamp(1.8rem, 5vw, 3.5rem);
+          background: var(--gradient-gold);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: titleGlow 3s ease-in-out infinite;
+          font-weight: 700;
+        }
+
+        h2 {
+          font-size: clamp(1.5rem, 4vw, 2.8rem);
+          margin-bottom: 1.5rem;
+          color: var(--text-dark);
+        }
+
+        h3 {
+          font-size: clamp(1.2rem, 3vw, 1.8rem);
+          margin-bottom: 1rem;
+          color: var(--text-dark);
+        }
+
+        p {
+          font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+          color: var(--text-medium);
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
+
+        @keyframes titleGlow {
+          0%, 100% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
+          50% { filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5)); }
+        }
+
+        /* Container and Layout */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .text-center {
+          text-align: center;
+        }
+
+        /* Header Styles */
+        .header {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1000;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(15px);
+          border-bottom: 1px solid var(--border-light);
+          padding: 15px 0;
+          box-shadow: var(--shadow-subtle);
+          transition: all 0.3s ease;
+        }
+
+        .header .container {
+          padding: 0 15px;
+        }
+
+        .header .flex {
+          position: relative;
+        }
+
+        .logo h1 {
+          font-family: 'Dancing Script', cursive;
+          font-size: clamp(1.5rem, 4vw, 2.5rem);
+          background: var(--gradient-gold);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-weight: 600;
+          margin: 0;
+          line-height: 1;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+          width: 25px;
+          height: 3px;
+          background: var(--text-dark);
+          margin: 3px 0;
+          transition: 0.3s;
+        }
+
+        /* Navigation Styles */
+        .nav-menu {
+          display: flex;
+          list-style: none;
+          gap: 1rem;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+        }
+
+        .nav-menu li a {
+          color: var(--text-dark);
+          text-decoration: none;
+          font-weight: 500;
+          padding: 8px 16px;
+          border-radius: 25px;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          font-size: clamp(0.8rem, 2vw, 1rem);
+          letter-spacing: 0.5px;
+          display: inline-block;
+          z-index: 1;
+        }
+
+        .nav-menu li a::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: var(--gradient-purple);
+          transition: left 0.4s ease;
+          z-index: -1;
+          border-radius: 25px;
+          opacity: 0;
+        }
+
+        .nav-menu li a:hover::before {
+          left: 0;
+          opacity: 1;
+        }
+
+        .nav-menu li a:hover {
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-premium);
+        }
+
+        .nav-menu li button {
+          background: var(--gradient-gold);
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 25px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: clamp(0.8rem, 2vw, 1rem);
+          letter-spacing: 0.5px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Premium Button Styles */
+        button {
+          padding: clamp(10px, 3vw, 15px) clamp(20px, 5vw, 35px);
+          background: var(--gradient-gold);
+          color: white;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+          font-weight: 600;
+          font-family: 'Inter', sans-serif;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          box-shadow: var(--shadow-gold);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: var(--gradient-purple);
+          transition: left 0.3s ease;
+          z-index: -1;
+        }
+
+        button:hover::before {
+          left: 0;
+        }
+
+        button:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+          color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+          margin-top: 80px;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          background: var(--gradient-light);
+          position: relative;
+          overflow: hidden;
+          padding: 40px 0;
+          background-image: url(https://github.com/yashverma2628/cosmic-guru/blob/main/file_000000006538623097ed78568c6280f4.png?raw=true);
+        }
+
+        .hero-text {
+          flex: 1;
+          z-index: 2;
+        }
+
+        .hero-text h1 {
+          margin-bottom: 2rem;
+          line-height: 1.2;
+        }
+
+        .hero-buttons {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 2rem;
+          flex-wrap: wrap;
+        }
+
+        .call-text {
+          font-size: clamp(1rem, 3vw, 1.3rem);
+          color: var(--accent-gold);
+          font-weight: 600;
+          padding: clamp(10px, 3vw, 15px) clamp(15px, 4vw, 25px);
+          border: 2px solid var(--accent-gold);
+          border-radius: 50px;
+          background: rgba(212, 175, 55, 0.1);
+          backdrop-filter: blur(10px);
+          animation: callPulse 2s ease-in-out infinite;
+          white-space: nowrap;
+        }
+
+        @keyframes callPulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+          50% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+        }
+
+        .hero-image {
+          flex: 1;
+          text-align: center;
+          z-index: 2;
+        }
+
+        .hero-image img {
+          max-width: 100%;
+          width: clamp(200px, 50vw, 400px);
+          height: auto;
+          border-radius: 50%;
+          border: 5px solid var(--accent-gold);
+          box-shadow: var(--shadow-glow);
+          animation: floatImage 4s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+
+        /* Section Styles */
+        .section {
+          padding: clamp(40px, 10vw, 100px) 0;
+          position: relative;
+        }
+
+        /* Animation Classes */
+        .slide-left {
+          transform: translateX(-100px);
+          opacity: 0;
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slide-right {
+          transform: translateX(100px);
+          opacity: 0;
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-in {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+
+        /* Service Cards */
+        .grid-4 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+          margin-top: 3rem;
+        }
+
+        .service-card {
+          background: var(--secondary-light);
+          padding: 2rem;
+          border-radius: 20px;
+          text-align: center;
+          border: 1px solid var(--border-light);
+          backdrop-filter: blur(15px);
+          transition: all 0.4s ease;
+          position: relative;
+          overflow: hidden;
+          box-shadow: var(--shadow-subtle);
+        }
+
+        .service-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          border-color: var(--accent-gold);
+          box-shadow: var(--shadow-premium);
+        }
+
+        .service-icon {
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+          aspect-ratio: 1;
+          margin-bottom: 1.5rem;
+          border-radius: 10px;
+          filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+          transition: all 0.3s ease;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+        }
+
+        /* Testimonial Cards */
+        .testimonial-card {
+          background: var(--secondary-light);
+          padding: 2rem;
+          border-radius: 20px;
+          margin: 1.5rem 0;
+          border-left: 5px solid var(--accent-gold);
+          backdrop-filter: blur(15px);
+          box-shadow: var(--shadow-subtle);
+          transition: all 0.3s ease;
+          position: relative;
+        }
+
+        .testimonial-card:hover {
+          transform: translateY(-5px);
+          box-shadow: var(--shadow-premium);
+        }
+
+        /* About Section */
+        .about-text {
+          flex: 1;
+          padding-right: 2rem;
+        }
+
+        .about-image {
+          flex: 1;
+          position: relative;
+        }
+
+        .image-container {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: var(--shadow-premium);
+          width: clamp(250px, 50vw, 320px);
+          height: clamp(250px, 50vw, 320px);
+          margin: 0 auto;
+        }
+
+        .background-video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+
+        .astrologer-about-img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          height: 60%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 3px solid var(--accent-gold);
+          box-shadow: var(--shadow-glow);
+        }
+
+        /* Gems Section */
+        .gems-section {
+          position: relative;
+          min-height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .gems-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 40px 20px;
+        }
+
+        .gems-background::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .gems-section .container {
+          position: relative;
+          z-index: 2;
+        }
+
+        /* Expectation Cards */
+        .expectation-card {
+          text-align: center;
+          padding: 2rem;
+          background: var(--secondary-light);
+          border-radius: 20px;
+          backdrop-filter: blur(15px);
+          transition: all 0.4s ease;
+          border: 1px solid var(--border-light);
+          box-shadow: var(--shadow-subtle);
+        }
+
+        .expectation-card:hover {
+          transform: translateY(-10px);
+          border-color: var(--accent-gold);
+          box-shadow: var(--shadow-premium);
+        }
+
+        .expectation-image {
+          width: 100%;
+          max-width: 180px;
+          height: auto;
+          aspect-ratio: 1;
+          margin: 0 auto 1.5rem;
+          border-radius: 50%;
+          border: 3px solid var(--accent-gold);
+          box-shadow: var(--shadow-gold);
+          transition: all 0.3s ease;
+        }
+
+        .expectation-title {
+          color: var(--text-dark);
+          font-size: clamp(1.1rem, 3vw, 1.5rem);
+        }
+
+        /* Footer */
+        .footer {
+          background: var(--soft-beige);
+          color: var(--text-dark);
+          padding: 60px 0 30px;
+          border-top: 1px solid var(--border-light);
+          position: relative;
+        }
+
+        .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+          color: var(--text-dark);
+          margin-bottom: 1.5rem;
+          font-size: clamp(1.1rem, 3vw, 1.5rem);
+        }
+
+        .footer-section ul {
+          list-style: none;
+        }
+
+        .footer-section ul li {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+          color: var(--text-medium);
+          text-decoration: none;
+          transition: all 0.3s ease;
+          font-size: clamp(0.8rem, 2vw, 1rem);
+        }
+
+        .footer-section ul li a:hover {
+          color: var(--accent-gold);
+          padding-left: 5px;
+        }
+
+        .social-links a {
+          display: inline-block;
+          margin-right: 1rem;
+          color: var(--accent-gold);
+          text-decoration: none;
+          padding: 8px;
+          border: 2px solid var(--accent-gold);
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          line-height: 19px;
+          transition: all 0.3s ease;
+          font-size: 0.8rem;
+        }
+
+        .social-links a:hover {
+          background: var(--accent-gold);
+          color: white;
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-gold);
+        }
+
+        /* Pendulum Section */
+        .pendulum-media {
+          flex: 1;
+          text-align: center;
+        }
+
+        .pendulum-text {
+          flex: 1;
+          padding-left: 2rem;
+        }
+
+        #pendulum-video {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+          border-radius: 20px;
+          border: 3px solid var(--accent-gold);
+          box-shadow: var(--shadow-premium);
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+          .mobile-menu-toggle {
+            display: flex;
+          }
+
+          .nav-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: var(--shadow-premium);
+            gap: 15px;
+          }
+
+          .nav-menu.mobile-active {
+            display: flex;
+          }
+
+          .nav-menu li {
+            width: 100%;
+            text-align: center;
+          }
+
+          .nav-menu li a,
+          .nav-menu li button {
+            width: 100%;
+            display: block;
+            padding: 12px 20px;
+            margin: 0;
+          }
+
+          .flex {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          .hero-section .flex {
+            text-align: center;
+          }
+
+          .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          .about-text,
+          .pendulum-text {
+            padding: 0;
+            margin-bottom: 2rem;
+          }
+
+          .grid-4 {
+            grid-template-columns: 1fr;
+          }
+
+          .grid-3 {
+            grid-template-columns: 1fr;
+          }
+
+          .service-card {
+            padding: 1.5rem;
+          }
+
+          .testimonial-card {
+            padding: 1.5rem;
+          }
+
+          .expectation-card {
+            padding: 1.5rem;
+          }
+
+          .gems-background {
+            background-attachment: scroll;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 0 10px;
+          }
+
+          .hero-section {
+            margin-top: 70px;
+            padding: 20px 0;
+          }
+
+          .section {
+            padding: 30px 0;
+          }
+
+          .service-icon {
+            max-width: 150px;
+          }
+
+          .expectation-image {
+            max-width: 120px;
+          }
+
+          .image-container {
+            width: 200px;
+            height: 200px;
+          }
+
+          .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .social-links a {
+            width: 30px;
+            height: 30px;
+            line-height: 14px;
+            font-size: 0.7rem;
+            margin-right: 0.5rem;
+          }
+        }
+
+        /* Keyframe Animations */
+        @keyframes bounce {
+          0%, 20%, 60%, 100% { transform: translateY(0); }
+          40% { transform: translateY(-10px); }
+          80% { transform: translateY(-5px); }
+        }
+
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.05); }
+        }
+
+        /* Special mobile menu animations */
+        .mobile-menu-toggle.active span:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
 </head>
 <body>
 
@@ -16,12 +838,18 @@
                 <!-- Logo Section (Left Side) -->
                 <div class="logo">
                     <h1>Cosmic Guru Chakresh Jain</h1>
-                    <!-- Add your unique font styling in CSS -->
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 
                 <!-- Navigation Menu (Right Side) -->
                 <nav>
-                    <ul class="nav-menu">
+                    <ul class="nav-menu" id="navMenu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
@@ -49,7 +877,6 @@
                 
                 <!-- Astrologer Image (Slides from Right) -->
                 <div class="hero-image slide-right">
-                    <!-- Replace with actual astrologer image -->
                     <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_000000004e00623081822a2025c2161b.png?raw=true" alt="Chakresh Jain" id="astrologer-image">
                 </div>
             </div>
@@ -67,11 +894,8 @@
             <div class="flex" style="margin-top: 50px;">
                 <!-- Pendulum Video/GIF (Slides from Left) -->
                 <div class="pendulum-media slide-left">
-                    <!-- Replace with actual pendulum video or GIF -->
-                    <div autoplay muted loop id="pendulum-video">
-                        <source src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615094735.gif?raw=true" type="video/mp4">
-                        <!-- Fallback for GIF -->
-                        <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615094735.gif?raw=true" alt="Pendulum Method">
+                    <div id="pendulum-video">
+                        <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615094735.gif?raw=true" alt="Pendulum Method" style="width: 100%; height: auto; border-radius: 20px;">
                     </div>
                 </div>
                 
@@ -87,132 +911,91 @@
                         problems and providing precise solutions for health, wealth, relationships, and career challenges.
                     </p>
                     
-                    <div class="text-center" style="margin-top: 30px;">
-                        <button onclick="bookAppointment()">Book Appointment</button>
+                    <div class="text-center" style="margin-top:30px;">
+                        <button onclick="learnMore('Pendulum')">Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scroll Animation Section -->
-    <section class="section" id="scroll-animation-section">
+    <!-- Services Section -->
+    <section id="services" class="section">
         <div class="container">
-            <!-- Services Heading -->
-            <div class="text-center fade-in" id="services-heading">
-                <h2>Our Services</h2>
+            <div class="text-center fade-in">
+                <h2>Our Premium Services</h2>
             </div>
             
-            <!-- Services Grid -->
-            <div class="grid-4" style="margin-top: 50px;">
-                <!-- Service 1: Astrology -->
+            <div class="grid-4">
+                <!-- Service 1 -->
                 <div class="service-card fade-in">
-                    <!-- Replace with actual astrology icon -->
-                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000aa4061f8a71bacb33c37b576%20(2).png?raw=true" alt="Astrology Icon" class="service-icon">
-                    <h3>Astrology</h3>
-                    <p>Comprehensive astrological analysis based on your birth chart, planetary positions, and cosmic influences to provide accurate predictions and guidance for your life path.</p>
-                    <button onclick="learnMore('astrology')">Learn More</button>
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000aa4061f8a71bacb33c37b576%20(2).png?raw=true" alt="Astrology Consultation" class="service-icon">
+                    <h3>Astrology Consultation</h3>
+                    <p>Comprehensive life analysis using scientific astrology methods for accurate predictions and guidance.</p>
+                    <button onclick="learnMore('Astrology')">Learn More</button>
                 </div>
                 
-                <!-- Service 2: Gems Remedy -->
+                <!-- Service 2 -->
                 <div class="service-card fade-in">
-                    <!-- Replace with actual gems icon -->
-                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_0000000089d461f8834cecc8bc753b17.png?raw=true" alt="Gems Remedy Icon" class="service-icon">
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_0000000089d461f8834cecc8bc753b17.png?raw=true" alt="Gems Remedy" class="service-icon">
                     <h3>Gems Remedy</h3>
-                    <p>Scientifically selected gemstones based on your astrological chart to enhance positive energies and neutralize negative influences in your life.</p>
-                    <button onclick="learnMore('gems')">Learn More</button>
+                    <p>Powerful gemstone recommendations based on your birth chart and energy patterns for positive transformation.</p>
+                    <button onclick="learnMore('Gems')">Learn More</button>
                 </div>
                 
-                <!-- Service 3: Metal Ring Remedy -->
+                <!-- Service 3 -->
                 <div class="service-card fade-in">
-                    <!-- Replace with actual metal ring icon -->
-                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000f53062309b588c9e8eaa7fea.png?raw=true" alt="Metal Ring Remedy Icon" class="service-icon">
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000f53062309b588c9e8eaa7fea.png?raw=true" alt="Metal Ring Remedy" class="service-icon">
                     <h3>Metal Ring Remedy</h3>
-                    <p>Specially designed metal rings with specific combinations to balance planetary effects and improve various aspects of your life including health and prosperity.</p>
-                    <button onclick="learnMore('metal-ring')">Learn More</button>
+                    <p>Specially designed metal rings to balance planetary influences and enhance positive energy flow.</p>
+                    <button onclick="learnMore('MetalRing')">Learn More</button>
                 </div>
                 
-                <!-- Service 4: Pendulum Method Remedy -->
+                <!-- Service 4 -->
                 <div class="service-card fade-in">
-                    <!-- Replace with actual pendulum icon -->
-                    <img src="[PASTE_PENDULUM_ICON_URL_HERE]" alt="Pendulum Method Icon" class="service-icon">
-                    <h3>Pendulum Method Remedy</h3>
-                    <p>Our signature pendulum-based diagnosis and remedy system that provides highly accurate solutions for complex life problems through energy detection.</p>
-                    <button onclick="learnMore('pendulum')">Learn More</button>
-                </div>
-                
-                <!-- Service 5: Rahu Dasha Remedy -->
-                <div class="service-card fade-in">
-                    <!-- Replace with actual rahu dasha icon -->
-                    <img src="[PASTE_RAHU_ICON_URL_HERE]" alt="Rahu Dasha Remedy Icon" class="service-icon">
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000f3d061f8bd7b77278c21c24a.png?raw=true" alt="Rahu Dasha Remedy" class="service-icon">
                     <h3>Rahu Dasha Remedy</h3>
-                    <p>Specialized remedies for Rahu Mahadasha period to minimize negative effects and maximize the positive transformation opportunities during this crucial phase.</p>
-                    <button onclick="learnMore('rahu-dasha')">Learn More</button>
-                </div>
-            </div>
-            
-            <!-- Book Appointment Button -->
-            <div class="text-center" style="margin-top: 50px;">
-                <button onclick="bookAppointment()">Book Appointment</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <div class="text-center">
-                <h2>What Our Clients Say</h2>
-            </div>
-            
-            <div class="testimonial-container" style="margin-top: 50px;">
-                <div class="testimonial-card fade-in">
-                    <p>"Chakresh Jain's pendulum method changed my life completely. His accurate predictions and effective remedies helped me overcome my career obstacles. Highly recommended!"</p>
-                    <h4>- Priya Sharma, Delhi</h4>
-                </div>
-                
-                <div class="testimonial-card fade-in">
-                    <p>"I was skeptical about astrology until I met Chakresh ji. His scientific approach and the pendulum technology gave me precise solutions for my health issues."</p>
-                    <h4>- Rajesh Kumar, Mumbai</h4>
-                </div>
-                
-                <div class="testimonial-card fade-in">
-                    <p>"The gem remedies suggested by Chakresh Jain brought positive changes in my business within months. His expertise is truly remarkable."</p>
-                    <h4>- Meena Patel, Ahmedabad</h4>
+                    <p>Effective solutions for Rahu Mahadasha challenges with proven remedies and spiritual guidance.</p>
+                    <button onclick="learnMore('RahuDasha')">Learn More</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Astrologer Section -->
-    <section class="section" id="about">
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
-            <div class="text-center">
-                <h2>Astrologer Chakresh Jain</h2>
+            <div class="text-center fade-in">
+                <h2>About Cosmic Guru Chakresh Jain</h2>
             </div>
             
             <div class="flex" style="margin-top: 50px;">
                 <!-- About Text (Slides from Left) -->
                 <div class="about-text slide-left">
+                    <h3>India's Most Trusted Scientific Astrologer</h3>
                     <p>
-                        Chakresh Jain is a renowned scientific astrologer with over 15 years of experience in the field of 
-                        astrological sciences. He has developed revolutionary pendulum technology that combines traditional 
-                        Vedic astrology with modern scientific methods. His research work has been recognized by various 
-                        astrological institutions across India. He has successfully helped over 10,000 clients worldwide 
-                        through his accurate predictions and effective remedies. His specialization includes pendulum-based 
-                        diagnosis, gemstone therapy, metal ring remedies, and Rahu Dasha solutions. He continues to research 
-                        and innovate in the field of astrology to provide better solutions for humanity.
+                        With over 15 years of dedicated research in scientific astrology, Chakresh Jain has revolutionized 
+                        the field by combining ancient Vedic wisdom with modern scientific approaches. His unique pendulum 
+                        method has helped thousands of people find solutions to their life's challenges.
+                    </p>
+                    <p>
+                        Specializing in accurate predictions and effective remedies, Chakresh Jain's expertise spans across 
+                        career guidance, relationship counseling, health issues, financial prosperity, and spiritual growth. 
+                        His scientific approach to astrology ensures precise results and practical solutions.
+                    </p>
+                    <p>
+                        Through his innovative techniques including gem therapy, metal ring remedies, and energy healing, 
+                        he has established himself as one of India's most sought-after astrologers. His clients include 
+                        celebrities, business leaders, and people from all walks of life.
                     </p>
                 </div>
                 
                 <!-- Astrologer Image with Background (Slides from Right) -->
                 <div class="about-image slide-right">
-                    <!-- Replace with actual about image with gif/video background -->
                     <div class="image-container">
                         <!-- Background GIF/Video -->
-                        <div autoplay muted loop class="background-video">
-                            
-                            <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615120005.gif?raw=true" alt="Background Animation">
+                        <div class="background-video">
+                            <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615120005.gif?raw=true" alt="Background Animation" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                         </div>
                         <!-- Astrologer Image -->
                         <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/Screenshot_20230311_164515_Chrome.jpg?raw=true" alt="Chakresh Jain" class="astrologer-about-img">
@@ -223,7 +1006,36 @@
             <!-- Buttons -->
             <div class="text-center" style="margin-top: 40px;">
                 <button onclick="scheduleAppointment()">Schedule Appointment</button>
-                <button onclick="contactUs()" style="margin-left: 20px; background: #333;">Contact Us</button>
+                <button onclick="contactUs()" style="margin-left: 20px; background: var(--gradient-purple);">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2>What Our Clients Say</h2>
+            </div>
+            
+            <div class="grid-3" style="margin-top: 50px;">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in">
+                    <p>"Chakresh Jain's pendulum method is truly revolutionary. His predictions were 100% accurate and the remedies worked like magic. My business grew by 300% after following his guidance."</p>
+                    <h4>- Rajesh Kumar, Business Owner</h4>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in">
+                    <p>"I was going through the worst phase of my life during Rahu Mahadasha. Chakresh Ji's remedies completely transformed my life. I found my soulmate and got my dream job within 6 months."</p>
+                    <h4>- Priya Sharma, Software Engineer</h4>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in">
+                    <p>"The gem recommendations were spot on! My health issues resolved completely after wearing the suggested stones. Chakresh Ji's scientific approach to astrology is unmatched."</p>
+                    <h4>- Dr. Amit Verma, Medical Professional</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -234,7 +1046,8 @@
         <div class="gems-background" style="background-image: url('https://sohinisastri.com/wp-content/uploads/2024/04/home-section-bg-blurred.jpg');">
             <div class="container">
                 <div class="text-center">
-                    <h2>Which Gems Suits You The Best? Ask The Best Scientific Astrologer in India - Chakresh Jain</h2>
+                    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Which Gems Suits You The Best? Ask The Best Scientific Astrologer in India - Chakresh Jain</h2>
+                    <button onclick="bookAppointment()" style="margin-top: 30px;">Get Gem Consultation</button>
                 </div>
             </div>
         </div>
@@ -243,30 +1056,47 @@
     <!-- What You Can Expect Section -->
     <section class="section">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center fade-in">
                 <h2>Here's What You Can Expect</h2>
             </div>
             
             <div class="grid-3" style="margin-top: 50px;">
                 <!-- Expectation 1 -->
                 <div class="expectation-card fade-in">
-                    <!-- Replace with actual image -->
                     <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-1.webp" alt="Powerful Remedy" class="expectation-image">
                     <h3 class="expectation-title">Powerful Remedy</h3>
+                    <p>Get scientifically proven remedies that work effectively for all your life challenges.</p>
                 </div>
                 
                 <!-- Expectation 2 -->
                 <div class="expectation-card fade-in">
-                    <!-- Replace with actual image -->
                     <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-2.webp" alt="Personalised Guidance" class="expectation-image">
                     <h3 class="expectation-title">Personalised Guidance</h3>
+                    <p>Receive customized solutions based on your unique birth chart and energy patterns.</p>
                 </div>
                 
                 <!-- Expectation 3 -->
                 <div class="expectation-card fade-in">
-                    <!-- Replace with actual image -->
                     <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-3.webp" alt="Trusted & Reliable Solutions" class="expectation-image">
                     <h3 class="expectation-title">Trusted & Reliable Solutions</h3>
+                    <p>Experience guaranteed results with time-tested methods and authentic astrological practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your life? Book your consultation today!</p>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <div class="hero-buttons">
+                    <button onclick="makeCall()" style="font-size: 1.2rem; padding: 15px 40px;">Call Now: 989xxxxxx</button>
+                    <button onclick="bookAppointment()" style="font-size: 1.2rem; padding: 15px 40px; background: var(--gradient-purple);">Book Appointment</button>
                 </div>
             </div>
         </div>
@@ -291,7 +1121,6 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -312,16 +1141,15 @@
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <!-- Replace with actual social media links -->
-                        <a href="[FACEBOOK_URL]">Facebook</a>
-                        <a href="[INSTAGRAM_URL]">Instagram</a>
-                        <a href="[YOUTUBE_URL]">YouTube</a>
-                        <a href="[TWITTER_URL]">Twitter</a>
+                        <a href="#" onclick="alert('Add your Facebook URL')">FB</a>
+                        <a href="#" onclick="alert('Add your Instagram URL')">IG</a>
+                        <a href="#" onclick="alert('Add your YouTube URL')">YT</a>
+                        <a href="#" onclick="alert('Add your Twitter URL')">TW</a>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid #555;">
+            <div class="text-center" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-light);">
                 <p>&copy; 2024 Cosmic Guru Chakresh Jain. All rights reserved.</p>
             </div>
         </div>
@@ -350,11 +1178,13 @@
 
             // Animate hero section immediately
             setTimeout(() => {
-                document.querySelector('.hero-text').classList.add('animate');
-                document.querySelector('.hero-image').classList.add('animate');
+                const heroText = document.querySelector('.hero-text');
+                const heroImage = document.querySelector('.hero-image');
+                if (heroText) heroText.classList.add('animate');
+                if (heroImage) heroImage.classList.add('animate');
             }, 300);
 
-            // Animate expectation titles with delay
+            // Animate expectation titles with stagger effect
             const expectationTitles = document.querySelectorAll('.expectation-title');
             expectationTitles.forEach((title, index) => {
                 setTimeout(() => {
@@ -362,12 +1192,10 @@
                 }, index * 200);
             });
 
-            // Animate expectation images
-            const expectationImages = document.querySelectorAll('.expectation-image');
-            expectationImages.forEach((img, index) => {
-                setTimeout(() => {
-                    img.style.animation = 'pulse 1s ease-in-out infinite alternate';
-                }, index * 300);
+            // Animate service cards on scroll
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
             });
         });
 
@@ -381,9 +1209,28 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Close mobile menu if open
+                    const navMenu = document.getElementById('navMenu');
+                    if (navMenu && navMenu.classList.contains('mobile-active')) {
+                        navMenu.classList.remove('mobile-active');
+                        const toggle = document.querySelector('.mobile-menu-toggle');
+                        if (toggle) toggle.classList.remove('active');
+                    }
                 }
             });
         });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (navMenu && toggle) {
+                navMenu.classList.toggle('mobile-active');
+                toggle.classList.toggle('active');
+            }
+        }
 
         // Function to handle phone calls
         function makeCall() {
@@ -393,202 +1240,141 @@
         // Function to book appointment
         function bookAppointment() {
             // Replace with your booking system URL or phone number
-            alert('Redirecting to booking system...');
-            // window.location.href = 'tel:989xxxxxx';
-            // or redirect to booking page
-            // window.location.href = 'https://your-booking-system.com';
+            const confirmed = confirm('Would you like to call now to book your appointment?');
+            if (confirmed) {
+                window.location.href = 'tel:989xxxxxx';
+            }
         }
 
         // Function to schedule appointment
         function scheduleAppointment() {
-            // Replace with your scheduling system
-            alert('Opening scheduling system...');
-            // window.location.href = 'https://your-scheduling-system.com';
+            const confirmed = confirm('Would you like to call now to schedule your appointment?');
+            if (confirmed) {
+                window.location.href = 'tel:989xxxxxx';
+            }
         }
 
         // Function to contact us
         function contactUs() {
-            // Replace with your contact form or page
-            alert('Opening contact form...');
-            // window.location.href = '#contact';
+            const target = document.querySelector('#contact');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
 
         // Function to learn more about services
         function learnMore(service) {
-            alert(`Learning more about ${service} service...`);
-            // Implement service-specific pages or modals
-            // window.location.href = `services/${service}.html`;
-        }
-
-        // Add CSS animations dynamically
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes bounce {
-                0%, 20%, 60%, 100% { transform: translateY(0); }
-                40% { transform: translateY(-10px); }
-                80% { transform: translateY(-5px); }
-            }
+            const messages = {
+                'Pendulum': 'The Pendulum Method uses specially calibrated pendulums to detect energy patterns and provide accurate predictions. Call 989xxxxxx to learn more!',
+                'Astrology': 'Get comprehensive astrology consultation combining ancient wisdom with modern scientific approach. Call 989xxxxxx to book!',
+                'Gems': 'Discover which gemstones can transform your life based on your unique energy patterns. Call 989xxxxxx for consultation!',
+                'MetalRing': 'Specially designed metal rings to balance planetary influences and enhance positive energy. Call 989xxxxxx to know more!',
+                'RahuDasha': 'Effective solutions for Rahu Mahadasha challenges with proven remedies. Call 989xxxxxx for guidance!'
+            };
             
-            @keyframes pulse {
-                0% { transform: scale(1); }
-                100% { transform: scale(1.05); }
-            }
+            alert(messages[service] || 'Call 989xxxxxx to learn more about our services!');
+        }
+
+        // Add ripple effect to buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
             
-            .expectation-title {
-                animation: bounce 0.6s ease-in-out;
-            }
-            
-            .expectation-image {
-                animation: pulse 1s ease-in-out infinite alternate;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Mobile menu toggle (if needed)
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('mobile-active');
-        }
-
-        // Lazy loading for images
-        const images = document.querySelectorAll('img');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    }
-                }
-            });
-        });
-
-        images.forEach(img => {
-            if (img.dataset.src) {
-                imageObserver.observe(img);
-            }
-        });
-
-        // Scroll to top functionality
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            if (scrollTop > 500) {
-                // Show scroll to top button
-                // You can implement this feature if needed
-            }
-        });
-
-        // Form validation (if you add contact forms)
-        function validateForm(formId) {
-            const form = document.getElementById(formId);
-            const inputs = form.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    input.classList.add('error');
-                    isValid = false;
-                } else {
-                    input.classList.remove('error');
-                }
-            });
-
-            return isValid;
-        }
-
-        // Analytics tracking (replace with your analytics code)
-        function trackEvent(eventName, eventData) {
-            // Replace with your analytics tracking code
-            console.log(`Event: ${eventName}`, eventData);
-            // Example: gtag('event', eventName, eventData);
-        }
-
-        // Track button clicks
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', () => {
-                trackEvent('button_click', {
-                    button_text: button.textContent,
-                    button_location: button.closest('section')?.id || 'unknown'
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s ease-out;
+                        pointer-events: none;
+                        z-index: 10;
+                    `;
+                    
+                    // Add ripple animation
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes ripple {
+                            to {
+                                transform: scale(4);
+                                opacity: 0;
+                            }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                    
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
                 });
             });
         });
 
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            });
 
-
-// REPLACE THE ENHANCED HEADER BUTTON ANIMATIONS SECTION WITH THIS:
-document.addEventListener('DOMContentLoaded', function() {
-    // Enhanced button animations for nav-menu buttons
-    const navButtons = document.querySelectorAll('.nav-menu button');
-    const navLinks = document.querySelectorAll('.nav-menu a:not(button a)'); // Exclude button links
-    
-    // Button specific animations (for Call button etc.)
-    navButtons.forEach(button => {
-        // Add ripple effect on click
-        button.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-            
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s ease-out;
-                pointer-events: none;
-            `;
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-        
-        // Enhanced hover effects for buttons
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px) scale(1.02)';
-            this.style.boxShadow = '0 12px 30px rgba(255, 215, 0, 0.6)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-2px) scale(1)';
-            this.style.boxShadow = '0 8px 25px rgba(255, 215, 0, 0.4)';
-        });
-    });
-    
-    // Enhanced link animations for navigation links (Home, About, Services, Contact)
-    navLinks.forEach(link => {
-        // Remove any conflicting inline styles first
-        link.style.transform = '';
-        link.style.color = '';
-        
-        // Smooth scroll with active state
-        if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Smooth scroll
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
             });
         }
-    });
-});
+
+        // Add loading states for better UX
+        function showLoading() {
+            document.body.style.cursor = 'wait';
+        }
+
+        function hideLoading() {
+            document.body.style.cursor = 'default';
+        }
+
+        // Add touch-friendly interactions for mobile
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+            
+            // Add CSS for touch devices
+            const touchStyles = document.createElement('style');
+            touchStyles.textContent = `
+                .touch-device button:active {
+                    transform: scale(0.95);
+                }
+                
+                .touch-device .service-card:active,
+                .touch-device .expectation-card:active,
+                .touch-device .testimonial-card:active {
+                    transform: scale(0.98);
+                }
+            `;
+            document.head.appendChild(touchStyles);
+        }
     </script>
 </body>
 </html>
