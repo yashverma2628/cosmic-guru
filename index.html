@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Guru Chakresh Jain - Scientific Astrologer</title>
+    <link rel="stylesheet" href="cosmicstyle.css" >
+  
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="flex">
+                <!-- Logo Section (Left Side) -->
+                <div class="logo">
+                    <h1>Cosmic Guru Chakresh Jain</h1>
+                    <!-- Add your unique font styling in CSS -->
+                </div>
+                
+                <!-- Navigation Menu (Right Side) -->
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><button onclick="makeCall()">Call</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="flex">
+                <!-- Heading Text (Slides from Left) -->
+                <div class="hero-text slide-left">
+                    <h1>The Most Trusted Scientific Astrologer in India with Well Researched Pendulum Technology - Chakresh Jain</h1>
+                    
+                    <div class="hero-buttons">
+                        <button onclick="bookAppointment()">Book Appointment</button>
+                        <span class="call-text">Call: 989xxxxxx</span>
+                    </div>
+                </div>
+                
+                <!-- Astrologer Image (Slides from Right) -->
+                <div class="hero-image slide-right">
+                    <!-- Replace with actual astrologer image -->
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_000000004e00623081822a2025c2161b.png?raw=true" alt="Chakresh Jain" id="astrologer-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Main Heading -->
+            <div class="text-center fade-in" id="why-choose-heading">
+                <h2>Why We Choose Chakresh Jain</h2>
+            </div>
+            
+            <div class="flex" style="margin-top: 50px;">
+                <!-- Pendulum Video/GIF (Slides from Left) -->
+                <div class="pendulum-media slide-left">
+                    <!-- Replace with actual pendulum video or GIF -->
+                    <div autoplay muted loop id="pendulum-video">
+                        <source src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615094735.gif?raw=true" type="video/mp4">
+                        <!-- Fallback for GIF -->
+                        <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615094735.gif?raw=true" alt="Pendulum Method">
+                    </div>
+                </div>
+                
+                <!-- Pendulum Method Text (Slides from Right) -->
+                <div class="pendulum-text slide-right">
+                    <h3>The Pendulum Method</h3>
+                    <p>
+                        Chakresh Jain's revolutionary pendulum method combines ancient wisdom with modern scientific approach. 
+                        This unique technique involves using a specially calibrated pendulum to detect energy patterns and 
+                        vibrations that influence your life. Through years of research and thousands of successful consultations, 
+                        this method has proven to provide highly accurate predictions and effective remedies. The pendulum acts 
+                        as a bridge between the cosmic energies and individual auras, helping to identify the root causes of 
+                        problems and providing precise solutions for health, wealth, relationships, and career challenges.
+                    </p>
+                    
+                    <div class="text-center" style="margin-top: 30px;">
+                        <button onclick="bookAppointment()">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Animation Section -->
+    <section class="section" id="scroll-animation-section">
+        <div class="container">
+            <!-- Services Heading -->
+            <div class="text-center fade-in" id="services-heading">
+                <h2>Our Services</h2>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid-4" style="margin-top: 50px;">
+                <!-- Service 1: Astrology -->
+                <div class="service-card fade-in">
+                    <!-- Replace with actual astrology icon -->
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000aa4061f8a71bacb33c37b576%20(2).png?raw=true" alt="Astrology Icon" class="service-icon">
+                    <h3>Astrology</h3>
+                    <p>Comprehensive astrological analysis based on your birth chart, planetary positions, and cosmic influences to provide accurate predictions and guidance for your life path.</p>
+                    <button onclick="learnMore('astrology')">Learn More</button>
+                </div>
+                
+                <!-- Service 2: Gems Remedy -->
+                <div class="service-card fade-in">
+                    <!-- Replace with actual gems icon -->
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_0000000089d461f8834cecc8bc753b17.png?raw=true" alt="Gems Remedy Icon" class="service-icon">
+                    <h3>Gems Remedy</h3>
+                    <p>Scientifically selected gemstones based on your astrological chart to enhance positive energies and neutralize negative influences in your life.</p>
+                    <button onclick="learnMore('gems')">Learn More</button>
+                </div>
+                
+                <!-- Service 3: Metal Ring Remedy -->
+                <div class="service-card fade-in">
+                    <!-- Replace with actual metal ring icon -->
+                    <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/file_00000000f53062309b588c9e8eaa7fea.png?raw=true" alt="Metal Ring Remedy Icon" class="service-icon">
+                    <h3>Metal Ring Remedy</h3>
+                    <p>Specially designed metal rings with specific combinations to balance planetary effects and improve various aspects of your life including health and prosperity.</p>
+                    <button onclick="learnMore('metal-ring')">Learn More</button>
+                </div>
+                
+                <!-- Service 4: Pendulum Method Remedy -->
+                <div class="service-card fade-in">
+                    <!-- Replace with actual pendulum icon -->
+                    <img src="[PASTE_PENDULUM_ICON_URL_HERE]" alt="Pendulum Method Icon" class="service-icon">
+                    <h3>Pendulum Method Remedy</h3>
+                    <p>Our signature pendulum-based diagnosis and remedy system that provides highly accurate solutions for complex life problems through energy detection.</p>
+                    <button onclick="learnMore('pendulum')">Learn More</button>
+                </div>
+                
+                <!-- Service 5: Rahu Dasha Remedy -->
+                <div class="service-card fade-in">
+                    <!-- Replace with actual rahu dasha icon -->
+                    <img src="[PASTE_RAHU_ICON_URL_HERE]" alt="Rahu Dasha Remedy Icon" class="service-icon">
+                    <h3>Rahu Dasha Remedy</h3>
+                    <p>Specialized remedies for Rahu Mahadasha period to minimize negative effects and maximize the positive transformation opportunities during this crucial phase.</p>
+                    <button onclick="learnMore('rahu-dasha')">Learn More</button>
+                </div>
+            </div>
+            
+            <!-- Book Appointment Button -->
+            <div class="text-center" style="margin-top: 50px;">
+                <button onclick="bookAppointment()">Book Appointment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2>What Our Clients Say</h2>
+            </div>
+            
+            <div class="testimonial-container" style="margin-top: 50px;">
+                <div class="testimonial-card fade-in">
+                    <p>"Chakresh Jain's pendulum method changed my life completely. His accurate predictions and effective remedies helped me overcome my career obstacles. Highly recommended!"</p>
+                    <h4>- Priya Sharma, Delhi</h4>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <p>"I was skeptical about astrology until I met Chakresh ji. His scientific approach and the pendulum technology gave me precise solutions for my health issues."</p>
+                    <h4>- Rajesh Kumar, Mumbai</h4>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <p>"The gem remedies suggested by Chakresh Jain brought positive changes in my business within months. His expertise is truly remarkable."</p>
+                    <h4>- Meena Patel, Ahmedabad</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Astrologer Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2>Astrologer Chakresh Jain</h2>
+            </div>
+            
+            <div class="flex" style="margin-top: 50px;">
+                <!-- About Text (Slides from Left) -->
+                <div class="about-text slide-left">
+                    <p>
+                        Chakresh Jain is a renowned scientific astrologer with over 15 years of experience in the field of 
+                        astrological sciences. He has developed revolutionary pendulum technology that combines traditional 
+                        Vedic astrology with modern scientific methods. His research work has been recognized by various 
+                        astrological institutions across India. He has successfully helped over 10,000 clients worldwide 
+                        through his accurate predictions and effective remedies. His specialization includes pendulum-based 
+                        diagnosis, gemstone therapy, metal ring remedies, and Rahu Dasha solutions. He continues to research 
+                        and innovate in the field of astrology to provide better solutions for humanity.
+                    </p>
+                </div>
+                
+                <!-- Astrologer Image with Background (Slides from Right) -->
+                <div class="about-image slide-right">
+                    <!-- Replace with actual about image with gif/video background -->
+                    <div class="image-container">
+                        <!-- Background GIF/Video -->
+                        <div autoplay muted loop class="background-video">
+                            
+                            <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/lv_0_20250615120005.gif?raw=true" alt="Background Animation">
+                        </div>
+                        <!-- Astrologer Image -->
+                        <img src="https://github.com/yashverma2628/cosmic-guru/blob/main/Screenshot_20230311_164515_Chrome.jpg?raw=true" alt="Chakresh Jain" class="astrologer-about-img">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="text-center" style="margin-top: 40px;">
+                <button onclick="scheduleAppointment()">Schedule Appointment</button>
+                <button onclick="contactUs()" style="margin-left: 20px; background: #333;">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gems Question Section -->
+    <section class="section gems-section">
+        <!-- Full width background image -->
+        <div class="gems-background" style="background-image: url('https://sohinisastri.com/wp-content/uploads/2024/04/home-section-bg-blurred.jpg');">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Which Gems Suits You The Best? Ask The Best Scientific Astrologer in India - Chakresh Jain</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Can Expect Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Here's What You Can Expect</h2>
+            </div>
+            
+            <div class="grid-3" style="margin-top: 50px;">
+                <!-- Expectation 1 -->
+                <div class="expectation-card fade-in">
+                    <!-- Replace with actual image -->
+                    <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-1.webp" alt="Powerful Remedy" class="expectation-image">
+                    <h3 class="expectation-title">Powerful Remedy</h3>
+                </div>
+                
+                <!-- Expectation 2 -->
+                <div class="expectation-card fade-in">
+                    <!-- Replace with actual image -->
+                    <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-2.webp" alt="Personalised Guidance" class="expectation-image">
+                    <h3 class="expectation-title">Personalised Guidance</h3>
+                </div>
+                
+                <!-- Expectation 3 -->
+                <div class="expectation-card fade-in">
+                    <!-- Replace with actual image -->
+                    <img src="https://sohinisastri.com/wp-content/uploads/2024/03/element-3.webp" alt="Trusted & Reliable Solutions" class="expectation-image">
+                    <h3 class="expectation-title">Trusted & Reliable Solutions</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Phone: 989xxxxxx</p>
+                    <p>Email: info@cosmicguru.com</p>
+                    <p>Address: [Your Address Here]</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Astrology Consultation</li>
+                        <li>Gems Remedy</li>
+                        <li>Metal Ring Remedy</li>
+                        <li>Pendulum Method</li>
+                        <li>Rahu Dasha Remedy</li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <!-- Replace with actual social media links -->
+                        <a href="[FACEBOOK_URL]">Facebook</a>
+                        <a href="[INSTAGRAM_URL]">Instagram</a>
+                        <a href="[YOUTUBE_URL]">YouTube</a>
+                        <a href="[TWITTER_URL]">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid #555;">
+                <p>&copy; 2024 Cosmic Guru Chakresh Jain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe all elements with animation classes
+            const animatedElements = document.querySelectorAll('.slide-left, .slide-right, .fade-in');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // Animate hero section immediately
+            setTimeout(() => {
+                document.querySelector('.hero-text').classList.add('animate');
+                document.querySelector('.hero-image').classList.add('animate');
+            }, 300);
+
+            // Animate expectation titles with delay
+            const expectationTitles = document.querySelectorAll('.expectation-title');
+            expectationTitles.forEach((title, index) => {
+                setTimeout(() => {
+                    title.style.animation = 'bounce 0.6s ease-in-out';
+                }, index * 200);
+            });
+
+            // Animate expectation images
+            const expectationImages = document.querySelectorAll('.expectation-image');
+            expectationImages.forEach((img, index) => {
+                setTimeout(() => {
+                    img.style.animation = 'pulse 1s ease-in-out infinite alternate';
+                }, index * 300);
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Function to handle phone calls
+        function makeCall() {
+            window.location.href = 'tel:989xxxxxx';
+        }
+
+        // Function to book appointment
+        function bookAppointment() {
+            // Replace with your booking system URL or phone number
+            alert('Redirecting to booking system...');
+            // window.location.href = 'tel:989xxxxxx';
+            // or redirect to booking page
+            // window.location.href = 'https://your-booking-system.com';
+        }
+
+        // Function to schedule appointment
+        function scheduleAppointment() {
+            // Replace with your scheduling system
+            alert('Opening scheduling system...');
+            // window.location.href = 'https://your-scheduling-system.com';
+        }
+
+        // Function to contact us
+        function contactUs() {
+            // Replace with your contact form or page
+            alert('Opening contact form...');
+            // window.location.href = '#contact';
+        }
+
+        // Function to learn more about services
+        function learnMore(service) {
+            alert(`Learning more about ${service} service...`);
+            // Implement service-specific pages or modals
+            // window.location.href = `services/${service}.html`;
+        }
+
+        // Add CSS animations dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes bounce {
+                0%, 20%, 60%, 100% { transform: translateY(0); }
+                40% { transform: translateY(-10px); }
+                80% { transform: translateY(-5px); }
+            }
+            
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                100% { transform: scale(1.05); }
+            }
+            
+            .expectation-title {
+                animation: bounce 0.6s ease-in-out;
+            }
+            
+            .expectation-image {
+                animation: pulse 1s ease-in-out infinite alternate;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Mobile menu toggle (if needed)
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('mobile-active');
+        }
+
+        // Lazy loading for images
+        const images = document.querySelectorAll('img');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        });
+
+        images.forEach(img => {
+            if (img.dataset.src) {
+                imageObserver.observe(img);
+            }
+        });
+
+        // Scroll to top functionality
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            if (scrollTop > 500) {
+                // Show scroll to top button
+                // You can implement this feature if needed
+            }
+        });
+
+        // Form validation (if you add contact forms)
+        function validateForm(formId) {
+            const form = document.getElementById(formId);
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('error');
+                    isValid = false;
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+
+            return isValid;
+        }
+
+        // Analytics tracking (replace with your analytics code)
+        function trackEvent(eventName, eventData) {
+            // Replace with your analytics tracking code
+            console.log(`Event: ${eventName}`, eventData);
+            // Example: gtag('event', eventName, eventData);
+        }
+
+        // Track button clicks
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                trackEvent('button_click', {
+                    button_text: button.textContent,
+                    button_location: button.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+
+
+
+// REPLACE THE ENHANCED HEADER BUTTON ANIMATIONS SECTION WITH THIS:
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced button animations for nav-menu buttons
+    const navButtons = document.querySelectorAll('.nav-menu button');
+    const navLinks = document.querySelectorAll('.nav-menu a:not(button a)'); // Exclude button links
+    
+    // Button specific animations (for Call button etc.)
+    navButtons.forEach(button => {
+        // Add ripple effect on click
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+        
+        // Enhanced hover effects for buttons
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+            this.style.boxShadow = '0 12px 30px rgba(255, 215, 0, 0.6)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-2px) scale(1)';
+            this.style.boxShadow = '0 8px 25px rgba(255, 215, 0, 0.4)';
+        });
+    });
+    
+    // Enhanced link animations for navigation links (Home, About, Services, Contact)
+    navLinks.forEach(link => {
+        // Remove any conflicting inline styles first
+        link.style.transform = '';
+        link.style.color = '';
+        
+        // Smooth scroll with active state
+        if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Smooth scroll
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+    });
+});
+    </script>
+</body>
+</html>
